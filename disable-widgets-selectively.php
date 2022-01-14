@@ -42,10 +42,10 @@ add_filter( 'dws_registered_settings', __NAMESPACE__ . '\register_settings' );
 
 function setup_menu( $menu ) {
     // These defaults can be customized
-    // $menu['parent'] = 'options-general.php';
     // $menu['menu_title'] = 'Settings Panel';
     // $menu['capability'] = 'manage_options';
     
+    $menu['parent'] = 'themes.php';
     $menu['page_title'] = __( 'Disable Widgets Selectively' );
     $menu['menu_title'] = $menu['page_title'];
 
