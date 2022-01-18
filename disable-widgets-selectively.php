@@ -108,7 +108,7 @@ function get_widget_names(){
 add_action('widgets_init', __NAMESPACE__ . '\disable_selected_widgets', 99);
 function disable_selected_widgets() {
     $page = $_SERVER['REQUEST_URI'];
-    if ($page != "/wp-admin/options-general.php?page=dws-settings"){
+    if ($page != "/wp-admin/themes.php?page=dws-settings"){
         $option_table = get_option('dws_settings');
         $option_table = is_array($option_table)? $option_table : array();
         $widgets_selected = array_key_exists('widgets_selected', $option_table)? $option_table['widgets_selected'] : array();
